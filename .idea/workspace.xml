@@ -4,25 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b0c1176-75c6-4da9-9e68-b715d506f08c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/RLTrainingAgent.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board_window.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect4_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect4_state.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect4_window.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/players.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/state.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe_state.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe_window.py" afterDir="false" />
+    <list default="true" id="3b0c1176-75c6-4da9-9e68-b715d506f08c" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/connect4_training.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rl_agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoe_training.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "EmanueleGottardelli"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/EmanueleGottardelli/RLTrainingAgent.git",
+    "accountId": "a322e4ba-3fd5-424d-a45b-8f6801b4b89d"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 0
 }]]></component>
@@ -76,11 +74,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762788341634</updated>
-      <workItem from="1762788342770" duration="449000" />
+      <workItem from="1762788342770" duration="3947000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1762789074037</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762789074037</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
