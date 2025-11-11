@@ -34,5 +34,5 @@ for episode in range(n_episodes):
         print(f"Episode {episode+1} completed")
 
 # Salva il modello allenato
-agent.model.keras_model.save("rl_tictactoe_model.h5")
+agent.model.keras_model.save("rl_tictactoe_model.keras")
 print("Training TicTacToe completato e modello salvato.")

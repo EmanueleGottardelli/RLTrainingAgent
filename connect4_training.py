@@ -33,5 +33,5 @@ for episode in range(n_episodes):
     if(episode+1)%100==0:
         print(f"Episode: {episode+1} completed")
 
-agent.model.keras_model.save("rl_connect4_model.h5")
+agent.model.keras_model.save("rl_connect4_model.keras")
 print("Training Connect4 completato e modello salvato")
