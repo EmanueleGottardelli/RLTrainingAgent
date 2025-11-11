@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b0c1176-75c6-4da9-9e68-b715d506f08c" name="Changes" comment="cambiamenti training">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connect4_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/connect4_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoe_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoe_model.py" afterDir="false" />
+    <list default="true" id="3b0c1176-75c6-4da9-9e68-b715d506f08c" name="Changes" comment="modifiche ai model">
+      <change beforePath="$PROJECT_DIR$/rl_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/rl_agent.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762788341634</updated>
-      <workItem from="1762788342770" duration="6671000" />
+      <workItem from="1762788342770" duration="6771000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -118,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762874297138</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="modifiche ai model">
+      <option name="closed" value="true" />
+      <created>1762875655124</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1762875655124</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,10 +135,11 @@
     <MESSAGE value="correzione di alcuni errori" />
     <MESSAGE value="cambiamenti rl" />
     <MESSAGE value="cambiamenti training" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambiamenti training" />
+    <MESSAGE value="modifiche ai model" />
+    <option name="LAST_COMMIT_MESSAGE" value="modifiche ai model" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RLTrainingAgent$tictactoe_training.coverage" NAME="tictactoe_training Coverage Results" MODIFIED="1762874785526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RLTrainingAgent$connect4_training.coverage" NAME="connect4_training Coverage Results" MODIFIED="1762874172997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RLTrainingAgent$connect4_training.coverage" NAME="connect4_training Coverage Results" MODIFIED="1762875681729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

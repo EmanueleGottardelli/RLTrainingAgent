@@ -8,7 +8,7 @@ class RLAgent(Player):
         self.epsilon = epsilon  # probabilità di esplorazione
         self.gamma = gamma  # fattore di sconto
         self.n_actions = n_actions
-        self.model = Model(ninput=n_input, layers=[64, 128, 128, 128, 128])
+        self.model = Model(ninput=n_input, layers=[64, 128, 128, 128, 128],n_actions=n_actions)
         self.replay_buffer = []
 
     def next_action(self, state):
