@@ -28,7 +28,8 @@ for episode in range(n_episodes):
 
         state = next_state
 
-    agent.train(batch_size=64)
+    if (episode + 1) % 10 == 0:
+        agent.train(batch_size=64)
 
     if (episode+1) % 100 == 0:
         print(f"Episode {episode+1} completed")
