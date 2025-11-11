@@ -1,8 +1,6 @@
-# train_rl_tictactoe.py
 from rl_agent import RLAgent
 from tictactoe_state import TicTacToeState
 from players import RandomPlayer
-from game import play
 
 # Parametri agente RL
 agent = RLAgent(n_input=9, n_actions=9, epsilon=0.2, gamma=0.99)
