@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b0c1176-75c6-4da9-9e68-b715d506f08c" name="Changes" comment="aggiunta di test play contro avversari Random e Minimax">
+    <list default="true" id="3b0c1176-75c6-4da9-9e68-b715d506f08c" name="Changes" comment="modifica del NNplayer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/players.py" beforeDir="false" afterPath="$PROJECT_DIR$/players.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_play_connect4.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_play_connect4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_play_tictactoe.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_play_tictactoe.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1762788341634</updated>
       <workItem from="1762788342770" duration="14625000" />
-      <workItem from="1763029512677" duration="6126000" />
+      <workItem from="1763029512677" duration="6875000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -161,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763034317614</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="modifica del NNplayer">
+      <option name="closed" value="true" />
+      <created>1763051150752</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1763051150752</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,12 +186,13 @@
     <MESSAGE value="modifiche tictactoe_training" />
     <MESSAGE value="modifiche model e rl_model" />
     <MESSAGE value="aggiunta di test play contro avversari Random e Minimax" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunta di test play contro avversari Random e Minimax" />
+    <MESSAGE value="modifica del NNplayer" />
+    <option name="LAST_COMMIT_MESSAGE" value="modifica del NNplayer" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RLTrainingAgent$tictactoe_training.coverage" NAME="tictactoe_training Coverage Results" MODIFIED="1762937356117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RLTrainingAgent$connect4_training.coverage" NAME="connect4_training Coverage Results" MODIFIED="1762875796887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RLTrainingAgent$test_play_tictactoe.coverage" NAME="test_play_tictactoe Coverage Results" MODIFIED="1763032851213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RLTrainingAgent$test_play_connect4.coverage" NAME="test_play_connect4 Coverage Results" MODIFIED="1763034079380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RLTrainingAgent$test_play_connect4.coverage" NAME="test_play_connect4 Coverage Results" MODIFIED="1763051353673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -2,10 +2,11 @@ import pygame
 import random
 
 from game import play
-from players import RandomPlayer, MiniMaxPlayer
+from players import RandomPlayer, MiniMaxPlayer, NNPlayer
 from rl_agent import RLAgent
 from connect4_state import Connect4State
 from connect4_window import Connect4Window
+from connect4_model import Connect4Model
 
 # Setup RLAgent
 agent = RLAgent(n_input=42, n_actions=7, epsilon=0.0)
@@ -14,7 +15,8 @@ agent.model.keras_model.load_weights("rl_connect4_model.keras")
 # Avversari da testare
 opponents = {
     "RandomPlayer": RandomPlayer(),
-    "MiniMaxPlayer": MiniMaxPlayer(lookahead=3)
+    "MiniMaxPlayer": MiniMaxPlayer(lookahead=1),
+    "NNPlayer": NNPlayer(Connect4Model())
 }
 
 n_games = 50 # numero di partite
