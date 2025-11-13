@@ -74,8 +74,14 @@ class NNPlayer(Player):
 
     def next_action(self, state):
         actions = state.actions()
-        current_player = state.player()
         states = [state.move(action).cells for action in actions]
-        probs = self.model.predict(states)
-        player_probs = [p[current_player] for p in probs]
-        return actions[argmax(player_probs)]
+        preds = self.model.predict(states)
+
+        player = state.player()
+        if player == 1:
+            player_idx = 1
+        else:
+            player_idx = 2
+
+        player_probs = [p[player_idx] for p in preds]
+        return actions[int(argmax(player_probs))]

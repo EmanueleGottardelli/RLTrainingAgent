@@ -67,4 +67,8 @@ class Model:
         return data
 
     def predict(self, states):
-        return self.keras_model.predict(states)
+        states= np.array(states, dtype=np.float32)
+
+        if states.ndim == 1:
+            states = np.expand_dims(states, axis=0)
+        return self.keras_model.predict(states, verbose=0)
