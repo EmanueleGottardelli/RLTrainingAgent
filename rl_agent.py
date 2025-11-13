@@ -1,6 +1,6 @@
 import numpy as np
 from players import Player
-from model import Model
+from rl_model import Model
 
 
 class RLAgent(Player):

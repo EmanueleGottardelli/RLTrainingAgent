@@ -4,7 +4,7 @@ from game import play, simulate
 from tictactoe_state import TicTacToeState
 
 
-@click.command('connect4')
+@click.command('tictactoe')
 @click.option('--simulations', '-s',
               default=10000,
               help='How many plays to simulate for training.')

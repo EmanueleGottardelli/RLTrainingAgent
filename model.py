@@ -1,45 +1,70 @@
-# model_rl.py
 import tensorflow as tf
 from tensorflow.keras.layers import Dense, Input
 import numpy as np
 
-class Model:
-    def __init__(self, ninput, layers, n_actions, model=None):
-        """
-        ninput: numero di input (celle dello stato)
-        layers: lista con il numero di neuroni per layer nascosto
-        n_actions: numero di azioni possibili
-        """
-        self.keras_model = model or self.build_model(ninput, layers, n_actions)
 
-    def build_model(self, ninput, layers, n_actions):
+class Model:
+    def __init__(self, ninput, layers, model=None):
+        self.keras_model = model or self.build_model(ninput, layers)
+
+    def build_model(self, ninput, layers):
         input_layer = Input(shape=(ninput,))
         x = input_layer
         for n in layers:
-            x = Dense(n, activation='relu')(x)
-        output_layer = Dense(n_actions, activation='linear')(x)  # Q-values
+            x = Dense(n, activation='relu',)(x)
+        output_layer = Dense(3, activation='softmax')(x)
 
-        model = tf.keras.Model(inputs=input_layer, outputs=output_layer)
-        model.compile(loss='mse', optimizer='rmsprop')
+        model = tf.keras.Model(input_layer, output_layer)
+
+        model.compile(loss='categorical_crossentropy',
+                      optimizer='rmsprop',
+                      metrics=['accuracy'])
         return model
 
-    def predict(self, states):
-        """
-        states: lista di stati o singolo stato
-        restituisce array NumPy con Q-values
-        """
-        states = np.array(states)
-        if len(states.shape) == 1:  # singolo stato
-            states = np.expand_dims(states, axis=0)
-        return self.keras_model.predict(states, verbose=0)
+    def train(self, plays, split_ratio=0.2, epochs=1, batch_size=128):
+        features, targets = self.preprocess(plays)
 
-    def fit(self, x, y, epochs=1, batch_size=32, verbose=0):
-        """
-        Funzione wrapper per allenare il modello
-        x: array di stati
-        y: array di target Q-values
-        """
-        self.keras_model.fit(np.array(x), np.array(y),
-                             epochs=epochs,
-                             batch_size=batch_size,
-                             verbose=verbose)
+        idx = int(split_ratio*len(features))
+
+        train_X, train_Y = features[idx:], targets[idx:]
+        test_X, test_Y = features[:idx], targets[:idx]
+
+        history = self.keras_model.fit(
+            train_X, train_Y,
+            validation_data=(test_X, test_Y),
+            epochs=epochs,
+            batch_size=batch_size)
+        print(history)
+
+    def preprocess(self, plays):
+        print(f'Proprocessing {len(plays)} plays...')
+        dataset = []
+        for states, winner in plays:
+            if winner == 0:
+                continue
+            rows = [(move.state.cells, winner) for move in states]
+            if states[-1].state.winner() != 0:
+                rows.extend(self._preprocess_critical_action(states, winner))
+
+            dataset.extend(rows)
+
+        np.random.shuffle(dataset)
+
+        features, targets = tuple(np.array(e) for e in zip(*dataset))
+        targets = tf.keras.utils.to_categorical(targets, num_classes=3)
+
+        return features, targets
+
+    def _preprocess_critical_action(self, states, winner):
+        critical_state = states[-3].state
+        critical_action = states[-2].action
+        data = []
+        for action in critical_state.actions():
+            state = critical_state.move(action)
+            if action != critical_action:
+                data.append((state.cells, critical_state.player()))
+
+        return data
+
+    def predict(self, states):
+        return self.keras_model.predict(states)
